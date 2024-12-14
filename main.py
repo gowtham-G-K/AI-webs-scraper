@@ -41,4 +41,5 @@ async def scrape_and_answer(url: URLInput, authorization: str = Header(None)):
         raise HTTPException(status_code=422, detail=str(e))
     
     except Exception as e:
+        print(str(e))
         raise HTTPException(status_code=500, detail="Internal server error")
