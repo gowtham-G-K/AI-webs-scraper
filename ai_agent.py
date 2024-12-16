@@ -2,14 +2,15 @@ from transformers import pipeline
 
 def get_company_details(dom_chunks):
     # Initialize the pipelines
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn")  # Summarization model
+    summarizer = pipeline("summarization", model="t5-small") # Summarization model
     qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")  # Question-answering model
 
     # Combine all the chunks into one large text
     full_text = " ".join(dom_chunks)
 
     # Summarize the full text into a concise version
-    summary = summarizer(full_text, max_length=500, min_length=150, do_sample=False)[0]['summary_text']
+    summary = summarizer(full_text, max_length=3000, min_length=150, do_sample=False)[0]['summary_text']
+    print("Summarized Text:", summary)  # Check the summary
 
     # Define the questions
     questions = [

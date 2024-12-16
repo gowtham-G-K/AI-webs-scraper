@@ -31,6 +31,8 @@ async def scrape_and_answer(url: URLInput, authorization: str = Header(None)):
         # Asynchronously get the content of the web page
         content = get_web_page_content(url.url)
 
+        raise Exception(content)
+
         # Parse the content with the AI agent function
         parsed_result = get_company_details(content)
 
