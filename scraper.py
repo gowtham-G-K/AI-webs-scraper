@@ -43,7 +43,7 @@ def clean_body_content(body_content: str) -> str:
     return cleaned_content
 
 
-def split_dom_content(dom_content: str, max_length: int = 6000) -> list:
+def split_dom_content(dom_content: str, max_length: int = 5000) -> list:
     """
     Split the DOM content into chunks of a specified maximum length.
     """

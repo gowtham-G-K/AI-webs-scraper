@@ -1,5 +1,5 @@
 from config import SECRET_KEY
-from ai_agent import parse_with_ollama
+from ai_agent import get_company_details
 from scraper import get_web_page_content
 from models import URLInput, ScrapingResponse
 from fastapi import FastAPI, HTTPException, Header
@@ -29,10 +29,10 @@ async def scrape_and_answer(url: URLInput, authorization: str = Header(None)):
 
     try:
         # Asynchronously get the content of the web page
-        content = await get_web_page_content(url.url)
+        content = get_web_page_content(url.url)
 
         # Parse the content with the AI agent function
-        parsed_result = await parse_with_ollama(content)
+        parsed_result = get_company_details(content)
 
         # Return the parsed result
         return parsed_result
