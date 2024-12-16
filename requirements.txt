@@ -4,8 +4,6 @@ atomicwrites==1.4.0
 backports.weakref==1.0.post1
 bs4==0.0.2
 clyent==1.2.1
-conda-repo-cli==1.0.75
-conda-verify==3.4.2
 Django==5.0.7
 django-cors-headers==4.4.0
 djangorestframework==3.15.2
