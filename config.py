@@ -1,6 +1,1 @@
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")
+SECRET_KEY = "EHZeCKirc7PGCvsRtEl8Ho5J4sbOT60k"
