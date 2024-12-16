@@ -37,9 +37,9 @@ starlette==0.41.3
 streamlit==1.36.0
 sympy==1.13.1
 tokenizers==0.21.0
-torch==2.5.1+cu118
-torchaudio==2.5.1+cu118
-torchvision==0.20.1+cu118
+torch==2.5.1
+torchaudio==2.5.1
+torchvision==0.20.1
 transformers==4.47.0
 uvicorn==0.34.0
 webencodings==0.5.1
