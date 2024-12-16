@@ -16,7 +16,7 @@ inflection==0.5.1
 jsonpointer==2.1
 mariadb==1.1.10
 memory-profiler==0.61.0
-mkl-service==2.4.0
+mkl-service==2.4.2
 munkres==1.1.4
 mysqlclient==2.2.4
 openpyxl==3.0.10
